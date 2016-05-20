@@ -1,0 +1,21 @@
+<div class="row bottom">
+	<div class="col-xs-12">
+		<button class="btn btn-success" ng-click="addData()">添加所有数据</button>
+		<button class="btn btn-danger" ng-click="removeData()">移除所有数据</button>
+		<button class="btn btn-danger" ng-click="addDataOne()">添加数据</button>
+	</div>
+</div>
+<form>
+	<table class="table table-striped" ng-if="items['status']==0">
+		<tr ng-repeat="item in items['data']">
+			<td>{{item.title}}</td>
+			<td><input class="form-control" type="text" ng-model="item.quantity"/></td>
+			<td>{{item.price|currency}}</td>
+			<td>{{item.price*item.quantity|currency}}</td>
+			<td><button class="btn btn-warning" ng-click="remove($index)">移除</button></td>
+		</tr>
+	</table>
+</form>
+<div ng-if="items['status']!=0" class="box box-flex">
+	{{items['error']}}
+</div>

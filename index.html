@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>angular</title>
+		<link rel="stylesheet" href="css/css.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		
+	<script type="text/javascript" src="js/angular.min.js" ></script>
+	<script type="text/javascript" src="js/angular-route.min.js" ></script>
+	</head>
+	<body>
+		<div id="myapp" class="container-fluid">
+			<div class="row myapp">
+				<div class="col-xs-4 left">
+					<ul>
+						<li><a href="#/shopCar">购物车</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-8 right">
+					<div ng-view class="box"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="router.js"></script>
+	<script type="text/javascript" src="service/$http.js"></script>
+	<script type="text/javascript" src="controller/shopCar.js"></script>
+</html>
